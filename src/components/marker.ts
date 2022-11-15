@@ -71,6 +71,7 @@ export type MarkerProps = {
   onDragStart?: (e: MarkerDragEvent) => void;
   onDrag?: (e: MarkerDragEvent) => void;
   onDragEnd?: (e: MarkerDragEvent) => void;
+  unwrap?: (m: MapboxMarker) => void;
   children?: React.ReactNode;
 };
 
@@ -125,6 +126,9 @@ function Marker(props: MarkerProps) {
       evt.lngLat = marker.getLngLat();
       thisRef.current.props.onDragEnd?.(evt);
     });
+    mk.on('load', () => {
+	  thisRef.current.props.unwrap?.(mk);
+	});
 
     return mk;
   }, []);
