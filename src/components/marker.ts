@@ -126,9 +126,10 @@ function Marker(props: MarkerProps) {
       evt.lngLat = marker.getLngLat();
       thisRef.current.props.onDragEnd?.(evt);
     });
-    mk.on('load', () => {
-	  thisRef.current.props.unwrap?.(mk);
-	});
+
+    if (thisRef.current.props.unwrap) {
+      thisRef.current.props.unwrap(mk);
+    }
 
     return mk;
   }, []);
