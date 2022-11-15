@@ -1,7 +1,7 @@
 {
-  "name": "@morgande/react-map-gl",
-  "description": "React components for Mapbox GL JS-compatible libraries",
-  "version": "7.0.15",
+  "name": "react-map-gl",
+  "description": "Morgand fork of React components for Mapbox GL JS-compatible libraries",
+  "version": "7.0.15.1",
   "keywords": [
     "mapbox",
     "mapbox-gl",
