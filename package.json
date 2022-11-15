@@ -1,5 +1,5 @@
 {
-  "name": "react-map-gl",
+  "name": "@morgande/react-map-gl",
   "description": "React components for Mapbox GL JS-compatible libraries",
   "version": "7.0.15",
   "keywords": [
